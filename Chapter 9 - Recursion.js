@@ -1,23 +1,24 @@
-/////////////////
-//// Page 99 ////
-/////////////////
+///////////////////////
+/////// Page 99 ///////
+///////////////////////
 
+/////// Recursive Sigma ///////
 function rSigma(n) {
   if (n === 0) {
     return 1;
   }
-
   return n + rSigma(n - 1);
 }
 
+/////// Recursive Factorial ///////
 function rFactorial(n) {
   if (n === 0) {
     return 1;
   }
-
   return n * rFactorial(n - 1);
 }
 
+/////// Flood Fill ///////
 var canvas2D = [
 		[3,2,3,4,3],
 		[2,3,3,4,0],
@@ -41,4 +42,16 @@ function floodFill(canvas2D, start, newColor, oldColor = 3){
 		var left = floodFill(canvas2D, [start[0], start[1]-1], newColor);
 		var right = floodFill(canvas2D, [start[0]+1, start[1]+1], newColor);
 	}
+}
+
+////////////////////////
+/////// Page 101 ///////
+////////////////////////
+
+///////  Recursive Fibonacci  ///////
+function rFib(num){
+	if(num < 2){
+		return 1;
+	}
+	return rFib(num-2) + rFib(num-1);
 }
